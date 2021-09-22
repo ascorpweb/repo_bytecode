@@ -66,7 +66,7 @@
 
                         <li><a href="contact.html">Contact</a></li>
 
-                        <li><a href="index.html">Registration</a></li>
+                        <li><a href="registration.html">Registration</a></li>
                         <li><a href="index.html">Login</a></li>
                     </ul>
                 </nav>
@@ -89,7 +89,7 @@
                         50+ leading technologies like JAVA, .NET, PYTHON, C++, C, PHP, ANDROID, FRAMEWORKS, DATABASE and
                         many more.
                     </p>
-                    <a href="#" class="primary-btn text-uppercase">Enroll Now</a>
+                    <a href="registration.html" class="primary-btn text-uppercase">Enroll Now</a>
                 </div>
             </div>
         </div>
@@ -416,18 +416,18 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 search-course-right section-gap">
-                    <form class="form-wrap" action="#">
+                    <form class="form-wrap"  action="#" method="POST" name="google-sheet">
                         <h3 class="text-white pb-20 text-center mb-30">Have Some Questions?</h3>
-                        <input type="text" class="form-control" name="name" placeholder="Your Name"
+                        <input type="text" class="form-control" name="Name" placeholder="Your Name"
                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'">
-                        <input type="phone" class="form-control" name="phone" placeholder="Your Phone Number"
+                        <input type="phone" class="form-control" name="Phone" placeholder="Your Phone Number"
                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'">
-                        <input type="email" class="form-control" name="email" placeholder="Your Email Address"
+                        <input type="email" class="form-control" name="Email" placeholder="Your Email Address"
                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'">
-                        <input type="text" class="form-control" name="message" placeholder="Your Message"
+                        <input type="text" class="form-control" name="Message" placeholder="Your Message"
                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Message'">
                        
-                        <button class="primary-btn text-uppercase">Submit</button>
+                        <button type="submit" class="primary-btn genric-btn primary" name="submit">Submit</button>
                     </form>
                 </div>
             </div>
@@ -517,7 +517,7 @@
                     </div>
                     <div class="single-carusel row align-items-center">
                         <div class="col-12 col-md-6 thumb">
-                            <img class="img-fluid" src="img/learn java now-min.jpg" alt="">
+                            <img cflass="img-fluid" src="img/learn java now-min.jpg" alt="">
                         </div>
                         <div class="detials col-12 col-md-6">
                             <p>25th July, 2021</p>
@@ -815,6 +815,18 @@
     </script>
     <script defer src="../../../static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"rayId":"6554795cfd5341fc","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.1","si":10}'></script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzAwDxw-H5D3LMt56arV_UH6SRBYxkNNJowj1mWSrL7asF9fQNnkSw00joSmFAr0W7g/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
 </body>
 
 

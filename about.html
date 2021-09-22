@@ -16,7 +16,7 @@
     <meta name="keywords" content="summer training, industrial training, 6 months training, 6 weeks training, training for   engineering
           students, project based training in Kanpur, summer training in Kanpur, winter training, live project training in Kanpur, mca training, 4 weeks training in kanpur,
           .net training, embedded system training,  no. 1 summer training institute in kanpur, top most training institute,mca 6 months internship in kanpur,b.tech industrial
-          training, cs project training, it training institite in kanpur,Best ccc course in kanpur ,Best o level course in kanpur,Best excel course in kanpur, Matlab Training,php Training, oracle Training,c language Training, c++ Training,best spring framework training in kanpur,hibernate training,database training,best sql training in kanpur,best angular training in kanpur,best react js training in kanpur, seo Training, ethical hacking Training,android Training, web designing Training, html5 Training, css3 Training" />
+          training, cs project training, it training institite in kanpur,Best ccc course in kanpur ,Best o level course in kanpur,Best excel course in kanpur, Matlab Training,php Training, oracle Training,c language Training, c++ Training,best spring framework training in kanpur,hibernate training,database training,best sql training in kanpur,best angular training in kanpur,best react js training in kanpur, seo Training, ethical hacking Training,android Training, web designing Training, html5 Training, css3 Training " />
 
     <meta charset="UTF-8">
 
@@ -65,7 +65,7 @@
                        
                         <li><a href="contact.html">Contact</a></li>
 
-                        <li><a href="index.html">Registration</a></li>
+                        <li><a href="registration.html">Registration</a></li>
                         <li><a href="index.html">Login</a></li>
                     </ul>
                 </nav>
@@ -256,12 +256,12 @@ BYTECODE has variety of knowledgeable and experienced trainers whose accession i
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 search-course-right section-gap">
-                    <form class="form-wrap" action="#">
+                    <form class="form-wrap" action="#" method="POST" name="google-sheet">
                         <h3 class="text-white pb-20 text-center mb-30">Have Some Questions?</h3>
-                        <input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'">
-                        <input type="phone" class="form-control" name="phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'">
-                        <input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'">
-                        <input type="text" class="form-control" name="message" placeholder="Your Message"
+                        <input type="text" class="form-control" name="Name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'">
+                        <input type="phone" class="form-control" name="Phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'">
+                        <input type="email" class="form-control" name="Email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'">
+                        <input type="text" class="form-control" name="Message" placeholder="Your Message"
                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Message'">
                        
                         <button class="primary-btn text-uppercase">Submit</button>
@@ -565,6 +565,19 @@ BYTECODE has variety of knowledgeable and experienced trainers whose accession i
         gtag('config', 'UA-23581568-13');
     </script>
     <script defer src="../../../static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"65547962eb390fd6","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.1","si":10}'></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzAwDxw-H5D3LMt56arV_UH6SRBYxkNNJowj1mWSrL7asF9fQNnkSw00joSmFAr0W7g/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
 </body>
 
 
